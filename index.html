@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Awesome books</title>
+    <link rel="stylesheet" href="/src/style.css">
   </head>
   <body>
     <h1>Awesome books</h1>
@@ -29,11 +30,12 @@
     <script>
       function newBook(e) {
         e.preventDefault();
-        title = document.getElementById("title").value;
-        author = document.getElementById("author").value;
-        myBooks.push(new Book(title, author));
-        localStorage.myBooks = JSON.stringify(myBooks);
-        getBooks();
+        title = document.getElementById("title");
+        author = document.getElementById("author");
+        myBooks.push(new Book(title.value, author.value));
+        updateLocalStorage();
+        title.value = "";
+        author.value = "";
       }
       const form = document.getElementById("form");
       form.addEventListener("submit", newBook);
@@ -43,12 +45,13 @@
         myBooks = JSON.parse(localStorage.myBooks);
         books = document.getElementById("books");
         books.innerHTML = "";
+        let id = 0;
         for (book of myBooks) {
           books.innerHTML += `
           <li>
             <p>${book.title}</p>
             <p>${book.author}</p>
-            <button onClick="destroyBook">Remove</button>
+            <button onClick="destroyBook(${id++})">Remove</button>
           </li>`;
         }
       }
