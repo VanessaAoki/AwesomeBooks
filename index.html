@@ -1,39 +1,58 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Awesome books</title>
-</head>
-<body>
-  <h1>Awesome books</h1>
-  <form action="#" id="form">
-    <input type="text" name="title" id="title" placeholder="Title">
-    <br>
-    <br>
-    <input type="text" name="author" id="author" placeholder="Author">
-    <br>
-    <br>
-    <input type="submit" name="submit-button" id="submit-button" value="Add book">
-  </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome books</title>
+  </head>
+  <body>
+    <h1>Awesome books</h1>
+    <ul id="books"></ul>
+    <form action="#" id="form">
+      <input type="text" name="title" id="title" placeholder="Title" />
+      <br />
+      <br />
+      <input type="text" name="author" id="author" placeholder="Author" />
+      <br />
+      <br />
+      <input
+        type="submit"
+        name="submit-button"
+        id="submit-button"
+        value="Add book"
+      />
+    </form>
 
-  <!-- SCRIPTS -->
-  <script src="/src/main.js"></script>
-  <script>
-    function newBook(e) {
-      e.preventDefault()
-      title = document.getElementById('title')
-      author = document.getElementById('author')
-    }
-    const form = document.getElementById('form');
-    form.addEventListener('submit', newBook);
-  </script>
-  <script>
-    function getBooks() {
-      
-    }
-  </script>
-</body>
+    <!-- SCRIPTS -->
+    <script src="/src/main.js"></script>
+    <script>
+      function newBook(e) {
+        e.preventDefault();
+        title = document.getElementById("title").value;
+        author = document.getElementById("author").value;
+        myBooks.push(new Book(title, author));
+        localStorage.myBooks = JSON.stringify(myBooks);
+        getBooks();
+      }
+      const form = document.getElementById("form");
+      form.addEventListener("submit", newBook);
+    </script>
+    <script>
+      function getBooks() {
+        myBooks = JSON.parse(localStorage.myBooks);
+        books = document.getElementById("books");
+        books.innerHTML = "";
+        for (book of myBooks) {
+          books.innerHTML += `
+          <li>
+            <p>${book.title}</p>
+            <p>${book.author}</p>
+            <button onClick="destroyBook">Remove</button>
+          </li>`;
+        }
+      }
+      if (localStorage.length > 0) getBooks();
+    </script>
+  </body>
 </html>
