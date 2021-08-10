@@ -2,14 +2,9 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-plusplus */
 
-// import { Book } from './book.js';
-
-const form = document.getElementById('form');
 class BookList {
   constructor() {
-    this.books =
-      localStorage.myBooks != null ? JSON.parse(localStorage.myBooks) : [];
-    form.addEventListener('submit', this.newBook);
+    this.books = localStorage.myBooks != null ? JSON.parse(localStorage.myBooks) : [];
   }
 
   renderBooks() {
@@ -36,8 +31,7 @@ class BookList {
     this.updateLocalStorage();
   }
 
-  newBook(e) {
-    e.preventDefault();
+  newBook() {
     const title = document.getElementById('title');
     const author = document.getElementById('author');
     this.books.push({ title: title.value, author: author.value });

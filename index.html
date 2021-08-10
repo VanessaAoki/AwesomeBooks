@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Awesome books</title>
-    <link rel="stylesheet" href="/src/style.css" />
-  </head>
 
-  <body>
-    <h1>Awesome books</h1>
-    <ul id="books"></ul>
-    <form action="#" id="form">
-      <input type="text" name="title" id="title" placeholder="Title" />
-      <br />
-      <br />
-      <input type="text" name="author" id="author" placeholder="Author" />
-      <br />
-      <br />
-      <input
-        type="submit"
-        name="submit-button"
-        id="submit-button"
-        value="Add book"
-      />
-    </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awesome books</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
 
-    <!-- SCRIPTS -->
-    <script src="src/main.js"></script>
-  </body>
+<body>
+  <h1>Awesome books</h1>
+  <ul id="books"></ul>
+  <form action="#" id="form">
+    <input type="text" name="title" id="title" placeholder="Title" />
+    <br />
+    <br />
+    <input type="text" name="author" id="author" placeholder="Author" />
+    <br />
+    <br />
+    <button onclick="myBooks.newBook()" id="add-button">Add book</button>
+  </form>
+
+  <!-- SCRIPTS -->
+  <script src="src/main.js"></script>
+</body>
+
 </html>
