@@ -2,48 +2,51 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-plusplus */
 
+// import { Book } from './book.js';
+
 const form = document.getElementById('form');
-let myBooks = [];
+class BookList {
+  constructor() {
+    this.books =
+      localStorage.myBooks != null ? JSON.parse(localStorage.myBooks) : [];
+    form.addEventListener('submit', this.newBook);
+  }
 
-function Book(title, author) {
-  this.title = title;
-  this.author = author;
-}
+  renderBooks() {
+    const books = document.getElementById('books');
+    books.innerHTML = '';
+    let id = 0;
+    for (const book of this.books) {
+      books.innerHTML += `
+      <li>
+        <p>${book.title}</p>
+        <p>${book.author}</p>
+        <button onClick="myBooks.destroyBook(${id++})">Remove</button>
+      </li>`;
+    }
+  }
 
-function getBooks() {
-  myBooks = JSON.parse(localStorage.myBooks);
-  const books = document.getElementById('books');
-  books.innerHTML = '';
-  let id = 0;
-  for (const book of myBooks) {
-    books.innerHTML += `
-    <li>
-      <p>${book.title}</p>
-      <p>${book.author}</p>
-      <button onClick="destroyBook(${id++})">Remove</button>
-    </li>`;
+  updateLocalStorage() {
+    localStorage.myBooks = JSON.stringify(this.books);
+    this.renderBooks();
+  }
+
+  destroyBook(id) {
+    this.books.splice(id, 1);
+    this.updateLocalStorage();
+  }
+
+  newBook(e) {
+    e.preventDefault();
+    const title = document.getElementById('title');
+    const author = document.getElementById('author');
+    this.books.push({ title: title.value, author: author.value });
+    this.updateLocalStorage();
+    title.value = '';
+    author.value = '';
   }
 }
 
-function updateLocalStorage() {
-  localStorage.myBooks = JSON.stringify(myBooks);
-  getBooks();
-}
+const myBooks = new BookList();
 
-function destroyBook(id) {
-  myBooks.splice(id, 1);
-  updateLocalStorage();
-}
-
-function newBook(e) {
-  e.preventDefault();
-  const title = document.getElementById('title');
-  const author = document.getElementById('author');
-  myBooks.push(new Book(title.value, author.value));
-  updateLocalStorage();
-  title.value = '';
-  author.value = '';
-}
-
-if (localStorage.length > 0) getBooks();
-form.addEventListener('submit', newBook);
+myBooks.renderBooks();
