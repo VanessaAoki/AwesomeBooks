@@ -15,7 +15,7 @@
 
 # Awesome Books
 
-_Screenshot: TBA_
+![Screenshot](./img/Screenshot.png)
 
 ## Built With
 

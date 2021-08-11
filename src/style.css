@@ -1,25 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 :root {
   --baby-blue: #d4f1f4;
   --blue-green: #75e6da;
   --blue-grotto: #189ab4;
-  --navy-blue: #05445e; 
+  --navy-blue: #05445e;
   --dark-blue: #0a2336;
+  --style-script: 'Style Script', cursive;
+  --quicksand: 'Quicksand', sans-serif;
 }
 
 html {
-  width: 100vw; 
+  width: 100vw;
   background-color: var(--baby-blue);
   color: var(--dark-blue);
+  font-family: var(--quicksand);
 }
 
-body { 
-  width: 85%; 
+body {
+  width: 85%;
   margin: 0 auto;
 }
 
 h1,
 h2 {
   text-align: center;
+  font-family: var(--style-script);
 }
 
 button {
@@ -27,16 +34,14 @@ button {
   border-radius: 5px;
   padding: 0.5em;
   background-color: white;
-}
-
-button:hover {
-  background-color: violet;
+  font-family: var(--quicksand);
+  font-weight: bold;
 }
 
 ul {
   list-style: none;
   padding: 0;
-  border: 1px solid var(--navy-blue);;
+  border: 1px solid var(--navy-blue);
 }
 
 li {
@@ -46,9 +51,13 @@ li {
   padding: 1em;
 }
 
-li:nth-child(even) { background-color: rgb(41, 194, 194); }
+li:nth-child(even) {
+  background-color: var(--blue-green);
+}
 
-li > button {padding: 0.5em 1em;}
+li > button {
+  padding: 0.5em 1em;
+}
 
 hr {
   width: 40%;
@@ -61,7 +70,7 @@ form {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 0.4em;
+  gap: 10px;
   align-items: center;
 }
 
@@ -75,4 +84,9 @@ form > input {
 form > button {
   width: 10em;
   align-self: flex-end;
+}
+
+button:hover {
+  background-color: var(--blue-grotto);
+  color: white;
 }
