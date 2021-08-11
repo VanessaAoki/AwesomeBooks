@@ -14,8 +14,7 @@ class BookList {
     for (const book of this.books) {
       books.innerHTML += `
       <li>
-        <p>${book.title}</p>
-        <p>${book.author}</p>
+        <div>"${book.title}" by ${book.author}</div>
         <button onClick="myBooks.destroyBook(${id++})">Remove</button>
       </li>`;
     }

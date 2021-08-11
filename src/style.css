@@ -1,9 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+  --baby-blue: #d4f1f4;
+  --blue-green: #75e6da;
+  --blue-grotto: #189ab4;
+  --navy-blue: #05445e;
+  --dark-blue: #0a2336;
+  --style-script: 'Style Script', cursive;
+  --quicksand: 'Quicksand', sans-serif;
+}
+
+html {
+  width: 100vw;
+  background-color: var(--baby-blue);
+  color: var(--dark-blue);
+  font-family: var(--quicksand);
+}
+
+body {
+  width: 85%;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-family: var(--style-script);
+}
+
+button {
+  border: 1px solid var(--navy-blue);
+  border-radius: 5px;
+  padding: 0.5em;
+  background-color: white;
+  font-family: var(--quicksand);
+  font-weight: bold;
+}
+
 ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  border: 1px solid var(--navy-blue);
 }
 
 li {
-  padding-bottom: 10px;
-  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+li:nth-child(even) {
+  background-color: var(--blue-green);
+}
+
+li > button {
+  padding: 0.5em 1em;
+}
+
+hr {
+  width: 40%;
+  color: var(--navy-blue);
+  margin: 2em auto;
+}
+
+form {
+  width: 30em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+form > input {
+  width: 99%;
+  border: 1px solid var(--navy-blue);
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+form > button {
+  width: 10em;
+  align-self: flex-end;
+}
+
+button:hover {
+  background-color: var(--blue-grotto);
+  color: white;
 }
