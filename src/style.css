@@ -1,9 +1,78 @@
+:root {
+  --baby-blue: #d4f1f4;
+  --blue-green: #75e6da;
+  --blue-grotto: #189ab4;
+  --navy-blue: #05445e; 
+  --dark-blue: #0a2336;
+}
+
+html {
+  width: 100vw; 
+  background-color: var(--baby-blue);
+  color: var(--dark-blue);
+}
+
+body { 
+  width: 85%; 
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+button {
+  border: 1px solid var(--navy-blue);
+  border-radius: 5px;
+  padding: 0.5em;
+  background-color: white;
+}
+
+button:hover {
+  background-color: violet;
+}
+
 ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  border: 1px solid var(--navy-blue);;
 }
 
 li {
-  padding-bottom: 10px;
-  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+li:nth-child(even) { background-color: rgb(41, 194, 194); }
+
+li > button {padding: 0.5em 1em;}
+
+hr {
+  width: 40%;
+  color: var(--navy-blue);
+  margin: 2em auto;
+}
+
+form {
+  width: 30em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  align-items: center;
+}
+
+form > input {
+  width: 99%;
+  border: 1px solid var(--navy-blue);
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+form > button {
+  width: 10em;
+  align-self: flex-end;
 }
