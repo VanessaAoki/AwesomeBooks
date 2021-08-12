@@ -30,6 +30,7 @@
 
 ## Getting Started
 
+### Running locally
 To run this project, you only need a computer with a browser (like Google Chrome, Mozilla Firefox, Microsoft Edge, Apple Safari, etc.) installed, and follow these steps:
 
 1. In your terminal, type the following, to clone this repository:
@@ -41,6 +42,9 @@ git clone git@github.com:VanessaAoki/AwesomeBooks.git
 2. Type `$ cd AwesomeBooks` to move to the project folder;
 
 3. Open the `index.html` file and run the application;
+
+### Live demo
+Alternatively, you can run the app through the [live demo link](https://rawcdn.githack.com/VanessaAoki/AwesomeBooks/3ca746caa2332a3bc69bb2846545a09298e8045f/index.html).
 
 ## Author
 
