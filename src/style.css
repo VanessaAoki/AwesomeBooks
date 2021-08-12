@@ -12,15 +12,20 @@
 }
 
 html {
-  width: 100vw;
+  width: 100%;
   background-color: var(--baby-blue);
   color: var(--dark-blue);
   font-family: var(--quicksand);
 }
 
 body {
-  width: 85%;
   margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+}
+
+.container {
+  padding-bottom: 2.5rem;
 }
 
 h1,
@@ -38,24 +43,78 @@ button {
   font-weight: bold;
 }
 
-ul {
+header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--navy-blue);
+  padding: 0 1em;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+nav > a {
+  text-decoration: none;
+  color: var(--navy-blue);
+}
+
+nav > a:hover {
+  color: var(--dark-blue);
+  font-weight: bolder;
+}
+
+nav > a:nth-child(even) {
+  border-right: 1px solid var(--navy-blue);
+  border-left: 1px solid var(--navy-blue);
+  padding: 0 5px;
+}
+
+#display-date {
+  text-align: right;
+  padding-right: 1em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+section {
+  width: 85%;
+  margin: 0 auto;
+}
+
+#books {
   list-style: none;
   padding: 0;
+  margin-bottom: 2em;
   border: 1px solid var(--navy-blue);
 }
 
-li {
+#books > li {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em;
 }
 
-li:nth-child(even) {
+#books > li:nth-child(even) {
   background-color: var(--blue-green);
 }
 
-li > button {
+form > button {
+  width: 10em;
+  align-self: flex-end;
+}
+
+button:hover {
+  background-color: var(--blue-grotto);
+  color: white;
+}
+
+#books > li > button {
   padding: 0.5em 1em;
 }
 
@@ -81,12 +140,34 @@ form > input {
   padding: 0.5em;
 }
 
-form > button {
-  width: 10em;
-  align-self: flex-end;
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem;
+  padding-left: 2em;
 }
 
-button:hover {
-  background-color: var(--blue-grotto);
-  color: white;
+.hidden {
+  display: none;
+}
+
+.h2-contact {
+  margin-bottom: 0;
+}
+
+.highlight {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.logo {
+  text-decoration: none;
+  color: var(--dark-blue);
+}
+
+.logo:visited { color: var(--dark-blue); }
+
+.logo:hover {
+  color: var(--blue-grotto);
+  font-weight: bolder;
 }
