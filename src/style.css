@@ -24,7 +24,9 @@ body {
   min-height: 100vh;
 }
 
-.container { padding-bottom: 2.5rem; }
+.container {
+  padding-bottom: 2.5rem;
+}
 
 h1,
 h2 {
@@ -41,7 +43,7 @@ button {
   font-weight: bold;
 }
 
-header {
+header > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,7 +51,7 @@ header {
   padding: 0 1em;
 }
 
-h1 { 
+h1 {
   font-size: 2em;
   margin: 0;
 }
@@ -59,42 +61,49 @@ nav > a {
   color: var(--navy-blue);
 }
 
-nav > a:hover { 
+nav > a:hover {
   color: var(--dark-blue);
   font-weight: bolder;
 }
 
-nav > a:nth-child(even) { 
+nav > a:nth-child(even) {
   border-right: 1px solid var(--navy-blue);
   border-left: 1px solid var(--navy-blue);
   padding: 0 5px;
 }
 
-h2 { font-size: 3em; }
+#display-date {
+  text-align: right;
+  padding-right: 1em;
+}
+
+h2 {
+  font-size: 3em;
+}
 
 section {
   width: 85%;
   margin: 0 auto;
 }
 
-ul {
+#books {
   list-style: none;
   padding: 0;
   border: 1px solid var(--navy-blue);
 }
 
-li {
+#books > li {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em;
 }
 
-li:nth-child(even) {
+#books > li:nth-child(even) {
   background-color: var(--blue-green);
 }
 
-li > button {
+#books > li > button {
   padding: 0.5em 1em;
 }
 
@@ -137,4 +146,10 @@ footer {
   padding-left: 2em;
 }
 
-.hidden { display: none; }
+.hidden {
+  display: none;
+}
+
+.h2-contact {
+  margin-bottom: 0;
+}
