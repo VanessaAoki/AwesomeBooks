@@ -12,16 +12,19 @@
 }
 
 html {
-  width: 100vw;
+  width: 100%;
   background-color: var(--baby-blue);
   color: var(--dark-blue);
   font-family: var(--quicksand);
 }
 
 body {
-  width: 85%;
   margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
 }
+
+.container { padding-bottom: 2.5rem; }
 
 h1,
 h2 {
@@ -36,6 +39,42 @@ button {
   background-color: white;
   font-family: var(--quicksand);
   font-weight: bold;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--navy-blue);
+  padding: 0 1em;
+}
+
+h1 { 
+  font-size: 2em;
+  margin: 0;
+}
+
+nav > a {
+  text-decoration: none;
+  color: var(--navy-blue);
+}
+
+nav > a:hover { 
+  color: var(--dark-blue);
+  font-weight: bolder;
+}
+
+nav > a:nth-child(even) { 
+  border-right: 1px solid var(--navy-blue);
+  border-left: 1px solid var(--navy-blue);
+  padding: 0 5px;
+}
+
+h2 { font-size: 3em; }
+
+section {
+  width: 85%;
+  margin: 0 auto;
 }
 
 ul {
@@ -90,3 +129,12 @@ button:hover {
   background-color: var(--blue-grotto);
   color: white;
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem;
+  padding-left: 2em;
+}
+
+.hidden { display: none; }

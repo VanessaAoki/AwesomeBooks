@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Awesome books</title>
-    <link rel="stylesheet" href="/src/style.css" />
-    <script
-      src="https://kit.fontawesome.com/78d4ca6841.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body>
-    <header>
-      <h1>Awesome books</h1>
-      <nav>
-        <a id="list-link" href="#">List</a>
-        <a id="add-new-link" href="#">Add new</a>
-        <a id="contact-link" href="#">Contact</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awesome books</title>
+  <link rel="stylesheet" href="/src/style.css" />
+  <script src="https://kit.fontawesome.com/78d4ca6841.js" crossorigin="anonymous"></script>
+</head>
 
-    <section>
+<body>
+  <header>
+    <h1>Awesome books</h1>
+    <nav>
+      <a id="list-link" onclick="showAllBooks()" href="#" class="">List</a>
+      <a id="add-new-link" onclick="showAddNew()" href="#">Add new</a>
+      <a id="contact-link" onclick="showContactUs()" href="#">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="all-books">
+      <h2>All awesome books</h2>
       <ul id="books"></ul>
+    </section>
+
+    <section id="add-new" class="hidden">
       <h2>Add a new book</h2>
       <form action="#" id="form">
         <input type="text" name="title" id="title" placeholder="Title" />
@@ -32,11 +35,11 @@
       </form>
     </section>
 
-    <section class="hidden">
-      <h2 class="hidden">Contact information</h2>
+    <section id="contact-us" class="hidden">
+      <h2>Contact information</h2>
       <p>Do you have any questions or just want to say "hello"?</p>
       <p>You can reach out to us!</p>
-
+      <br>
       <h3>👩🏼‍💻 Vanessa Aoki</h3>
 
       <ul>
@@ -76,22 +79,22 @@
         </li>
         <li>
           LinkedIn:
-          <a
-            href="https://www.linkedin.com/in/enio-neves-de-souza/"
-            target="_blank"
-          >
+          <a href="https://www.linkedin.com/in/enio-neves-de-souza/" target="_blank">
             Enio Neves de Souza
           </a>
         </li>
       </ul>
     </section>
+  </div>
 
-    <footer>
-      Copyright<i class="fa fa-copyright" aria-hidden="true"></i> 2021
-      VanessaAoki & enionsouza
-    </footer>
+  <footer>
+    Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2021
+    VanessaAoki & enionsouza
+  </footer>
 
-    <!-- SCRIPTS -->
-    <script src="src/main.js"></script>
-  </body>
+  <!-- SCRIPTS -->
+  <script src="src/main.js"></script>
+  <script src="src/ui.js"></script>
+</body>
+
 </html>
