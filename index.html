@@ -6,18 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Awesome books</title>
     <link rel="stylesheet" href="/src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/78d4ca6841.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
-    <h1>Awesome books</h1>
-    <ul id="books"></ul>
-    <hr />
-    <h2>Add a new book</h2>
-    <form action="#" id="form">
-      <input type="text" name="title" id="title" placeholder="Title" />
-      <input type="text" name="author" id="author" placeholder="Author" />
-      <button onclick="myBooks.newBook()" id="add-button">Add book</button>
-    </form>
+    <header>
+      <h1>Awesome books</h1>
+      <nav>
+        <a id="list-link" href="#">List</a>
+        <a id="add-new-link" href="#">Add new</a>
+        <a id="contact-link" href="#">Contact</a>
+      </nav>
+    </header>
+
+    <section>
+      <ul id="books"></ul>
+      <h2>Add a new book</h2>
+      <form action="#" id="form">
+        <input type="text" name="title" id="title" placeholder="Title" />
+        <input type="text" name="author" id="author" placeholder="Author" />
+        <button onclick="myBooks.newBook()" id="add-button">Add book</button>
+      </form>
+    </section>
+
+    <section class="hidden">
+      <h2 class="hidden">Contact information</h2>
+      <p>Do you have any questions or just want to say "hello"?</p>
+      <p>You can reach out to us!</p>
+
+      <h3>👩🏼‍💻 Vanessa Aoki</h3>
+
+      <ul>
+        <li>
+          GitHub:
+          <a href="https://github.com/VanessaAoki" target="_blank">
+            @VanessaAoki
+          </a>
+        </li>
+        <li>
+          Twitter:
+          <a href="https://twitter.com/VanessaSAoki" target="_blank">
+            @VanessaAoki
+          </a>
+        </li>
+        <li>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/vanessasaoki/" target="_blank">
+            Vanessa Aoki
+          </a>
+        </li>
+      </ul>
+
+      <h3>👤 Ênio Neves de Souza</h3>
+      <ul>
+        <li>
+          GitHub:
+          <a href="https://github.com/enionsouza" target="_blank">
+            @enionsouza
+          </a>
+        </li>
+        <li>
+          Twitter:
+          <a href="https://twitter.com/enionsouza" target="_blank">
+            @enionsouza
+          </a>
+        </li>
+        <li>
+          LinkedIn:
+          <a
+            href="https://www.linkedin.com/in/enio-neves-de-souza/"
+            target="_blank"
+          >
+            Enio Neves de Souza
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      Copyright<i class="fa fa-copyright" aria-hidden="true"></i> 2021
+      VanessaAoki & enionsouza
+    </footer>
 
     <!-- SCRIPTS -->
     <script src="src/main.js"></script>
