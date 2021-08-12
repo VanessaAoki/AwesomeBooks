@@ -89,6 +89,7 @@ section {
 #books {
   list-style: none;
   padding: 0;
+  margin-bottom: 2em;
   border: 1px solid var(--navy-blue);
 }
 
@@ -101,6 +102,16 @@ section {
 
 #books > li:nth-child(even) {
   background-color: var(--blue-green);
+}
+
+form > button {
+  width: 10em;
+  align-self: flex-end;
+}
+
+button:hover {
+  background-color: var(--blue-grotto);
+  color: white;
 }
 
 #books > li > button {
@@ -129,16 +140,6 @@ form > input {
   padding: 0.5em;
 }
 
-form > button {
-  width: 10em;
-  align-self: flex-end;
-}
-
-button:hover {
-  background-color: var(--blue-grotto);
-  color: white;
-}
-
 footer {
   position: absolute;
   bottom: 0;
@@ -152,4 +153,21 @@ footer {
 
 .h2-contact {
   margin-bottom: 0;
+}
+
+.highlight {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.logo {
+  text-decoration: none;
+  color: var(--dark-blue);
+}
+
+.logo:visited { color: var(--dark-blue); }
+
+.logo:hover {
+  color: var(--blue-grotto);
+  font-weight: bolder;
 }

@@ -15,7 +15,13 @@
 
 # Awesome Books
 
-![Screenshot](./img/Screenshot.png)
+<p align="center">
+    <img alt="Screenshot" src="./img/Screenshot1.png" width="700">
+    <br>
+    <img alt="Screenshot" src="./img/Screenshot2.png" width="700">
+    <br>
+    <img alt="Screenshot" src="./img/Screenshot3.png" width="700">
+</p>
 
 ## Built With
 
